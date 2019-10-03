@@ -13,11 +13,15 @@ class LookupController {
     static Person lookupPerson(Person person) {
         URL url = person.getURL();
 
-        if (url == null) {
-            return null;
+        if (url != null) {
+            String html = NetworkController.fetchHTML(url);
+
+            if (html != null) {
+                return person;
+            }
         }
 
-        return person;
+        return null;
     }
 
 }
