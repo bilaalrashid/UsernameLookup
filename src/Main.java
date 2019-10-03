@@ -5,6 +5,8 @@ import java.util.Scanner;
  */
 public class Main {
 
+    // Constants
+
     /**
      * The message to display when asking the user for an input
      */
@@ -19,6 +21,8 @@ public class Main {
      * The message to display when outputting the person's full name
      */
     private static final String FULL_NAME_MESSAGE = "Name: ";
+
+    // Methods
 
     /**
      * Gets information about a person from their email id

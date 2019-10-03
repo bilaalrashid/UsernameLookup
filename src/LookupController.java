@@ -10,7 +10,7 @@ class LookupController {
      * @param person The person to lookup
      * @return The updated person
      */
-    public static Person lookupPerson(Person person) {
+    static Person lookupPerson(Person person) {
         URL url = person.getURL();
 
         if (url == null) {

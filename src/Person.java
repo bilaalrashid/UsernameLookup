@@ -61,7 +61,7 @@ class Person {
      * Gets the person's username
      * @return The username of the person
      */
-    public String getUsername() {
+    String getUsername() {
         return username;
     }
 
@@ -69,7 +69,7 @@ class Person {
      * Gets the person's full name and title
      * @return The title and full name of the person
      */
-    public String getFullname() {
+    String getFullname() {
         return fullname;
     }
 
@@ -77,12 +77,11 @@ class Person {
      * Gets the URL of the person's public profile page
      * @return The URL of the person's public page
      */
-    public URL getURL() {
+    URL getURL() {
         String fullPath = URI_BASE_PATH + this.username;
 
         try {
             URI uri = new URI(URI_PROTOCOL, URI_HOST, fullPath, null);
-
             return uri.toURL();
         } catch(Exception e) {
             return null;
@@ -95,7 +94,7 @@ class Person {
      * Sets the person's username
      * @param username The new username of the person
      */
-    public void setUsername(String username) {
+    void setUsername(String username) {
         this.username = username;
     }
 
@@ -103,7 +102,7 @@ class Person {
      * Sets the person's full name and title
      * @param fullname The new full name and title of the person
      */
-    public void setFullname(String fullname) {
+    void setFullname(String fullname) {
         this.fullname = fullname;
     }
 
