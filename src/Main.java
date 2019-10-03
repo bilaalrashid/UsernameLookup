@@ -32,6 +32,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print(INPUT_MESSAGE);
         String username = scanner.next();
+        scanner.close();
 
         Person inputPerson = new Person(username);
         Person outputPerson = LookupController.lookupPerson(inputPerson);
