@@ -17,6 +17,9 @@ class LookupController {
             String html = NetworkController.fetchHTML(url);
 
             if (html != null) {
+                HTMLParseController parser = new HTMLParseController(html);
+                String name = parser.getChildFromFirstElement("h1", "property", "name");
+                person.setFullname(name);
                 return person;
             }
         }
