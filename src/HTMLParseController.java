@@ -26,6 +26,10 @@ class HTMLParseController {
     String getChildFromFirstElement(String tag, String attribute, String value) {
         String element = getFirstElement(tag, attribute, value);
 
+        if (element == null) {
+            return null;
+        }
+
         String stripTags = "<[^>]*>";
         RegexController regexController = new RegexController(element, stripTags);
         String tagContents = regexController.replaceAll("");
