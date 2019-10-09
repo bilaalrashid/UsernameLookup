@@ -50,16 +50,6 @@ class Person {
         this.username = username;
     }
 
-    /**
-     * Creates a new person
-     * @param username The person's university username
-     * @param fullname The full name and title of the person
-     */
-    Person(String username, String fullname) {
-        this.username = username;
-        this.fullname = fullname;
-    }
-
     // Getters
 
     /**
