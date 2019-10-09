@@ -62,7 +62,7 @@ class Person {
      * @return The username of the person
      */
     String getUsername() {
-        return username;
+        return this.username;
     }
 
     /**
@@ -70,7 +70,7 @@ class Person {
      * @return The title and full name of the person
      */
     String getFullname() {
-        return fullname;
+        return this.fullname;
     }
 
     /**
@@ -78,7 +78,7 @@ class Person {
      * @return The telephone number
      */
     String getTelephone() {
-        return telephone;
+        return this.telephone;
     }
 
     /**
@@ -86,7 +86,7 @@ class Person {
      * @return The email address
      */
     String getEmail() {
-        return email;
+        return this.email;
     }
 
     /**
