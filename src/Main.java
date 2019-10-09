@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 /**
- * The main program that returns the data of a person from their email id
+ * The main program that returns the data of a person from their email username
  */
 public class Main {
 
     /**
-     * Gets information about a person from their email id
+     * Gets information about a person from their email username
      * @param args The command line arguments
      */
     public static void main(String[] args) {
