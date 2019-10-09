@@ -1,19 +1,19 @@
 /**
  * Manages the parsing of an HTML structure
  */
-class HTMLParseController {
+class HTML {
 
     /**
      * The HTML to parse
      */
-    private String html;
+    private String text;
 
     /**
      * Creates a new HTML parser
-     * @param html The HTML to be parsed
+     * @param text The HTML to be parsed
      */
-    HTMLParseController(String html) {
-        this.html = html;
+    HTML(String text) {
+        this.text = text;
     }
 
     /**
@@ -48,7 +48,7 @@ class HTMLParseController {
      */
     String getFirstElement(String tag, String attribute, String value) {
         String regex = "<\\s*" + tag + "[^>]*\\s*" + attribute + "=[\"\']" + value + "[\"\']\\s*>(.*?)<\\s*/\\s*" + tag + ">";
-        RegexController regexController = new RegexController(this.html, regex);
+        RegexController regexController = new RegexController(this.text, regex);
         return regexController.getFirstMatch();
     }
 

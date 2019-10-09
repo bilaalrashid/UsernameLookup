@@ -13,7 +13,22 @@ class NetworkController {
      * @param url The URL to fetch
      * @return The HTML from the page
      */
-    static String fetchHTML(URL url) {
+    static HTML fetchHTML(URL url) {
+        String contents = fetchURLContents(url);
+
+        if (contents != null) {
+            return new HTML(contents);
+        }
+
+        return null;
+    }
+
+    /**
+     * Fetches the contents from a URL
+     * @param url The URL to fetch
+     * @return The contents of the page
+     */
+    static String fetchURLContents(URL url) {
         try {
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 

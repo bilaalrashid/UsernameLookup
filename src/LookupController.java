@@ -14,18 +14,16 @@ class LookupController {
         URL url = person.getURL();
 
         if (url != null) {
-            String html = NetworkController.fetchHTML(url);
+            HTML html = NetworkController.fetchHTML(url);
 
             if (html != null) {
-                HTMLParseController parser = new HTMLParseController(html);
-
-                String name = parser.getChildFromFirstElement("h1", "property", "name");
+                String name = html.getChildFromFirstElement("h1", "property", "name");
                 person.setFullname(name);
 
-                String telephone = parser.getChildFromFirstElement("a", "property", "telephone");
+                String telephone = html.getChildFromFirstElement("a", "property", "telephone");
                 person.setTelephone(telephone);
 
-                String email = parser.getChildFromFirstElement("a", "property", "email");
+                String email = html.getChildFromFirstElement("a", "property", "email");
                 person.setEmail(email);
 
                 return person;
