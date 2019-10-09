@@ -18,8 +18,13 @@ class LookupController {
 
             if (html != null) {
                 HTMLParseController parser = new HTMLParseController(html);
+
                 String name = parser.getChildFromFirstElement("h1", "property", "name");
                 person.setFullname(name);
+
+                String telephone = parser.getChildFromFirstElement("a", "property", "telephone");
+                person.setTelephone(telephone);
+
                 return person;
             }
         }

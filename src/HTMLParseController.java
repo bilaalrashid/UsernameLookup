@@ -34,8 +34,8 @@ class HTMLParseController {
         RegexController regexController = new RegexController(element, stripTags);
         String tagContents = regexController.replaceAll("");
 
-        String onlyLetters = "[A-z| ]*";
-        regexController = new RegexController(tagContents, onlyLetters);
+        String onlyLettersAndNumbers = "[A-z0-9+| ]*";
+        regexController = new RegexController(tagContents, onlyLettersAndNumbers);
         return regexController.getFirstMatch();
     }
 
@@ -47,7 +47,7 @@ class HTMLParseController {
      * @return The matched HTML element
      */
     String getFirstElement(String tag, String attribute, String value) {
-        String regex = "<\\s*" + tag + "[^>]*\\s*" + attribute + "=\"" + value + "\"\\s*>(.*?)<\\s*/\\s*" + tag + ">";
+        String regex = "<\\s*" + tag + "[^>]*\\s*" + attribute + "=[\"\']" + value + "[\"\']\\s*>(.*?)<\\s*/\\s*" + tag + ">";
         RegexController regexController = new RegexController(this.html, regex);
         return regexController.getFirstMatch();
     }

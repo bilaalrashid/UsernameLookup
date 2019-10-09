@@ -35,6 +35,11 @@ class Person {
      */
     private String fullname;
 
+    /**
+     * The person's telephone number
+     */
+    private String telephone;
+
     // Constructors
 
     /**
@@ -74,6 +79,14 @@ class Person {
     }
 
     /**
+     * Gets the person's telephone number
+     * @return The telephone number
+     */
+    String getTelephone() {
+        return telephone;
+    }
+
+    /**
      * Gets the URL of the person's public profile page
      * @return The URL of the person's public page
      */
@@ -104,6 +117,14 @@ class Person {
      */
     void setFullname(String fullname) {
         this.fullname = fullname;
+    }
+
+    /**
+     * Sets the person's telephone number
+     * @param telephone The new telephone number
+     */
+    void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
 }
