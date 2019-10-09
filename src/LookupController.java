@@ -25,6 +25,9 @@ class LookupController {
                 String telephone = parser.getChildFromFirstElement("a", "property", "telephone");
                 person.setTelephone(telephone);
 
+                String email = parser.getChildFromFirstElement("a", "property", "email");
+                person.setEmail(email);
+
                 return person;
             }
         }

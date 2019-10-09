@@ -23,4 +23,9 @@ class Strings {
      */
     static final String TELEPHONE_MESSAGE = "Telephone: ";
 
+    /**
+     * The message to display when outputting the person's email address
+     */
+    static final String EMAIL_MESSAGE = "Email: ";
+
 }

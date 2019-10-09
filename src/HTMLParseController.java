@@ -34,7 +34,7 @@ class HTMLParseController {
         RegexController regexController = new RegexController(element, stripTags);
         String tagContents = regexController.replaceAll("");
 
-        String onlyLettersAndNumbers = "[A-z0-9+| ]*";
+        String onlyLettersAndNumbers = "[A-z0-9+@_.-| ]*";
         regexController = new RegexController(tagContents, onlyLettersAndNumbers);
         return regexController.getFirstMatch();
     }

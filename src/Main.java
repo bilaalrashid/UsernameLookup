@@ -18,7 +18,7 @@ public class Main {
         Person inputPerson = new Person(username);
         Person outputPerson = LookupController.lookupPerson(inputPerson);
 
-        if (outputPerson == null || outputPerson.getFullname() == null || outputPerson.getTelephone() == null) {
+        if (outputPerson == null || outputPerson.getFullname() == null || outputPerson.getTelephone() == null || outputPerson.getEmail() == null) {
             System.out.println(Strings.ERROR_MESSAGE);
             System.exit(0);
         }
@@ -28,6 +28,9 @@ public class Main {
 
         String telephone = outputPerson.getTelephone();
         System.out.println(Strings.TELEPHONE_MESSAGE + telephone);
+
+        String email = outputPerson.getEmail();
+        System.out.println(Strings.EMAIL_MESSAGE + email);
     }
 
 }

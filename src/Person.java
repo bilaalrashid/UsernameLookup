@@ -40,6 +40,11 @@ class Person {
      */
     private String telephone;
 
+    /**
+     * The person's email address
+     */
+    private String email;
+
     // Constructors
 
     /**
@@ -74,6 +79,14 @@ class Person {
      */
     String getTelephone() {
         return telephone;
+    }
+
+    /**
+     * Gets the person's email address
+     * @return The email address
+     */
+    String getEmail() {
+        return email;
     }
 
     /**
@@ -115,6 +128,14 @@ class Person {
      */
     void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    /**
+     * Sets the person's email address
+     * @param email The new email address
+     */
+    void setEmail(String email) {
+        this.email = email;
     }
 
 }
